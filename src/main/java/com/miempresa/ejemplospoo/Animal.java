@@ -9,27 +9,41 @@ package com.miempresa.ejemplospoo;
  * @author ramos
  */
 public class Animal {
+    //Atributos de la clase Animal
     private String nombre;
     private String especie;
-    
-    
-
-    public Animal(String nombre,String especie ) {
-        this.nombre = nombre;
-        this.especie = especie;             
+        
+    //Constructor: Se usa para crear nuevas instancias de Animal
+    public Animal(String nombre, String especie) {
+    this.nombre = nombre;
+    this.especie = especie;
     }
-    public String getNombre(){
+       
+    //Métodos "get" se usa para acceder a los atributos (encapsulación)
+    public String getNombre()
+    {
         return nombre;
     }
-    public String getEspecie(){
+        
+    public String getEspecie()
+    {
         return especie;
-}
-public void setNombre(String nombre){
-    this.nombre = nombre;
+    }
+        
+        //Métodos "set" para modificar los atributos (si se permite)
+    public void setNombre(String nombre)
+    {
+        this.nombre = nombre;
+    }
+    public void setEspecie(String especie)
+    {
+        this.especie = especie; 
+    }
     
-}
-@Override
-public String toString(){
-    return "Nombre: " + nombre + ", Especie: " + especie;
+    //Método para mostrar la información del animal
+    @Override //Sobrescribe el método toString de la clase Object
+    public String toString()
+    {
+        return "Nombre: " + nombre + "Especie: " + especie;
     }
 }
